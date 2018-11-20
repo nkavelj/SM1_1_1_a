@@ -9,6 +9,7 @@ disp('x0, y0, z0, ex, ey, ez, m:');
 p=trafoparam_3d_12p(X,Z)
 %% Aufgabe 1b)
 disp('Aufgabe 1b)');
+fprintf('\n');
 Xfull=[A1_SystemI(:,2),A1_SystemI(:,1),A1_SystemI(:,3)];
 disp('Punkt 4 [x,y,z]:');
 Z4=trafo3d(Xfull(4,:),p(1),p(2),p(3),p(4),p(5),p(6),p(7));
