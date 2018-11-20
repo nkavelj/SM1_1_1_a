@@ -1,4 +1,4 @@
-function [ t ] = trafoparam_3d_12p ( X,Z )
+function [ p ] = trafoparam_3d_12p ( X,Z )
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 G=zeros(15,12);
@@ -38,5 +38,9 @@ m=(m1+m2+m3)/3;
 ex=atan2(t(11),t(12));
 ey=atan2(-t(10),sqrt(t(4)^2+t(7)^2));
 ez=atan2(t(7),t(4));
+x0=t(1);
+y0=t(2);
+z0=t(3);
+p=[x0,y0,z0,ex,ey,ez,m];
 end
 
