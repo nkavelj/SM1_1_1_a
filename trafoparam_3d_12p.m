@@ -16,12 +16,12 @@ for i=1:1:5
     G(3*i,11)=X(i,2);
     G(3*i,12)=X(i,3);
 end
-Z_list = [Z(:,1);Z(:,2);Z(:,3)];
+Zs = [Z(:,1);Z(:,2);Z(:,3)];
 Z_=[];
 G_=[];
 for i=1:1:15
-    if isnan(Z_list(i))==0
-        Z_=[Z_;Z_list(i)];
+    if isnan(Zs(i))==0
+        Z_=[Z_;Zs(i)];
         G_=[G_;G(i,:)];
     end
 end
