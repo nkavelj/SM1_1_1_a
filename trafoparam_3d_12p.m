@@ -31,5 +31,12 @@ for i=1:1:15
     end
 end
 t=G_\Z_;
+m1=sqrt(t(4)^2+t(7)^2+t(10)^2);
+m2=sqrt(t(5)^2+t(8)^2+t(11)^2);
+m3=sqrt(t(6)^2+t(9)^2+t(12)^2);
+m=(m1+m2+m3)/3;
+ex=atan2(t(11),t(12));
+ey=atan2(-t(10),sqrt(t(4)^2+t(7)^2));
+ez=atan2(t(7),t(4));
 end
 
