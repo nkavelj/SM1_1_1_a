@@ -28,3 +28,4 @@ disp('Punkt 7 [x,y,z]:');
 Z7=trafo3d(Xfull(7,:),p(1),p(2),p(3),p(4),p(5),p(6),p(7));
 fprintf('%.4f\n',Z7);
 fprintf('\n');
+%% Aufgabe 2b)

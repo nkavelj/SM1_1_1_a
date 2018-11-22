@@ -34,7 +34,8 @@ D(1,3)=cos(ex)*sin(ey)*cos(ez)+sin(ex)*sin(ez);
 D(2,3)=cos(ex)*sin(ey)*sin(ez)-sin(ex)*cos(ez);
 D(3,3)=cos(ex)*cos(ey);
 
-X_d=X-transpose([x0;y0;z0]+m*D*transpose(X));
+X0=[x0*ones(size(X,1));y0*ones(size(X,1));z0*ones(size(X,1))];
+X_d=Z-transpose(X0+m*D*transpose(X));
 X_d_t=[];
 for i=1:1:size(X_d)
     for j=1:1:3
@@ -75,7 +76,8 @@ G=G_;
 dp=G\X_d_t;
 p_=p_+transpose(dp);
 
-for i=1:1:10
+X_d_t_check=1;
+while X_d_t_check>0.00005
     D=zeros(3,3);
     D(1,1)=cos(ey)*cos(ez);
     D(2,1)=cos(ey)*sin(ez);
@@ -87,7 +89,8 @@ for i=1:1:10
     D(2,3)=cos(ex)*sin(ey)*sin(ez)-sin(ex)*cos(ez);
     D(3,3)=cos(ex)*cos(ey);
     
-    X_d=X-transpose([x0;y0;z0]+m*D*transpose(X));
+    X0=[x0*ones(size(X,1));y0*ones(size(X,1));z0*ones(size(X,1))];
+    X_d=Z-transpose(X0+m*D*transpose(X));
     X_d_t=[];
     for i=1:1:size(X_d)
         for j=1:1:3
@@ -123,6 +126,7 @@ for i=1:1:10
         end
     end
     X_d_t=X_d_t_;
+    X_d_t_check=max(X_d_t);
     G=G_;
     
     dp=G\X_d_t;
