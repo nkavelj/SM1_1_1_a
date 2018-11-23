@@ -29,7 +29,6 @@ Z7=trafo3d(Xfull(7,:),p(1),p(2),p(3),p(4),p(5),p(6),p(7));
 fprintf('%.4f\n',Z7);
 fprintf('\n');
 %% Aufgabe 2b)
-%p=[20,10,-5,0,0,0,1];
 disp('Aufgabe 1b)');
 fprintf('\n');
 disp('Parameter fuer Punkt 1, 2, 5:');
