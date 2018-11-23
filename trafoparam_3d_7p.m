@@ -76,7 +76,7 @@ G=G_;
 dp=G\X_d_t;
 p_=p_+transpose(dp);
 
-X_d_t_check=1;
+X_d_t_check=max(X_d_t);
 while X_d_t_check>=0.00005
     x0=p_(1);
     y0=p_(2);
