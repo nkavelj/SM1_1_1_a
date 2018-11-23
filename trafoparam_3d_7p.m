@@ -12,7 +12,7 @@ m=p_(7);
 X_t=[];
 for i=1:1:size(X)
     for j=1:1:3
-        X_t=[X_t;Z(i,j)];
+        X_t=[X_t;X(i,j)];
     end
 end
 
@@ -64,7 +64,7 @@ end
 
 X_d_t_=[];
 G_=[];
-for i=1:1:size(X_d_t(i))
+for i=1:1:size(X_d_t)
     if isnan(X_d_t(i))==0
         X_d_t_=[X_d_t_;X_d_t(i)];
         G_=[G_;G(i,:)];
@@ -119,7 +119,7 @@ while X_d_t_check>0.00005
     
     X_d_t_=[];
     G_=[];
-    for i=1:1:size(X_d_t(i))
+    for i=1:1:size(X_d_t)
         if isnan(X_d_t(i))==0
             X_d_t_=[X_d_t_;X_d_t(i)];
             G_=[G_;G(i,:)];
