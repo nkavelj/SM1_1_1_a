@@ -29,7 +29,7 @@ Z7=trafo3d(Xfull(7,:),p(1),p(2),p(3),p(4),p(5),p(6),p(7));
 fprintf('%.4f\n',Z7);
 fprintf('\n');
 %% Aufgabe 2b)
-disp('Aufgabe 1b)');
+disp('Aufgabe 2b)');
 fprintf('\n');
 disp('Parameter fuer Punkt 1, 2, 5 (x0, y0, z0, ex, ey, ez, m):');
 X1=[A1_SystemI(1,2) A1_SystemI(1,1) A1_SystemI(1,3);A1_SystemI(2,2) A1_SystemI(2,1) A1_SystemI(2,3);A1_SystemI(5,2) A1_SystemI(5,1) A1_SystemI(5,3)];
