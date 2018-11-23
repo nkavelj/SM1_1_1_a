@@ -35,15 +35,12 @@ fprintf('\n');
 disp('Parameter fuer Punkt 1, 2, 5:');
 X1=[A1_SystemI(1,2) A1_SystemI(1,1) A1_SystemI(1,3);A1_SystemI(2,2) A1_SystemI(2,1) A1_SystemI(2,3);A1_SystemI(5,2) A1_SystemI(5,1) A1_SystemI(5,3)];
 Z1=[A1_SystemII(1,2) A1_SystemII(1,1) A1_SystemII(1,3);A1_SystemII(2,2) A1_SystemII(2,1) A1_SystemII(2,3);A1_SystemII(5,2) A1_SystemII(5,1) A1_SystemII(5,3)];
-trafoparam_3d_7p(X1,Z1,p)
-fprintf('\n');
-disp('Parameter fuer Punkt 1, 2, 6:');
-X2=[A1_SystemI(1,2) A1_SystemI(1,1) A1_SystemI(1,3);A1_SystemI(2,2) A1_SystemI(2,1) A1_SystemI(2,3);A1_SystemI(6,2) A1_SystemI(6,1) A1_SystemI(6,3)];
-Z2=[A1_SystemII(1,2) A1_SystemII(1,1) A1_SystemII(1,3);A1_SystemII(2,2) A1_SystemII(2,1) A1_SystemII(2,3);A1_SystemII(6,2) A1_SystemII(6,1) A1_SystemII(6,3)];
-trafoparam_3d_7p(X2,Z2,p)
+p1=trafoparam_3d_7p(X1,Z1,p);
+fprintf('%.4f\n',p1);
 fprintf('\n');
 disp('Parameter fuer Punkt 1, 4, 5, 6:');
 X3=[A1_SystemI(1,2) A1_SystemI(1,1) A1_SystemI(1,3);A1_SystemI(4,2) A1_SystemI(4,1) A1_SystemI(4,3);A1_SystemI(5,2) A1_SystemI(5,1) A1_SystemI(5,3);A1_SystemI(6,2) A1_SystemI(6,1) A1_SystemI(6,3)];
 Z3=[A1_SystemII(1,2) A1_SystemII(1,1) A1_SystemII(1,3);A1_SystemII(4,2) A1_SystemII(4,1) A1_SystemII(4,3);A1_SystemII(5,2) A1_SystemII(5,1) A1_SystemII(5,3);A1_SystemII(6,2) A1_SystemII(6,1) A1_SystemII(6,3)];
-trafoparam_3d_7p(X3,Z3,p)
+p3=trafoparam_3d_7p(X3,Z3,p);
+fprintf('%.4f\n',p3);
 fprintf('\n');

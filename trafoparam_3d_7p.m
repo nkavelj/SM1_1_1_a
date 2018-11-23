@@ -77,7 +77,15 @@ dp=G\X_d_t;
 p_=p_+transpose(dp);
 
 X_d_t_check=1;
-while X_d_t_check>0.00005
+while X_d_t_check>=0.00005
+    x0=p_(1);
+    y0=p_(2);
+    z0=p_(3);
+    ex=p_(4);
+    ey=p_(5);
+    ez=p_(6);
+    m=p_(7);
+    
     D=zeros(3,3);
     D(1,1)=cos(ey)*cos(ez);
     D(2,1)=cos(ey)*sin(ez);
@@ -89,7 +97,7 @@ while X_d_t_check>0.00005
     D(2,3)=cos(ex)*sin(ey)*sin(ez)-sin(ex)*cos(ez);
     D(3,3)=cos(ex)*cos(ey);
     
-   X0=[x0*transpose(ones(size(X,1),1));y0*transpose(ones(size(X,1),1));z0*transpose(ones(size(X,1),1))];
+    X0=[x0*transpose(ones(size(X,1),1));y0*transpose(ones(size(X,1),1));z0*transpose(ones(size(X,1),1))];
     X_d=Z-transpose(X0+m*D*transpose(X));
     X_d_t=[];
     for i=1:1:size(X_d)
