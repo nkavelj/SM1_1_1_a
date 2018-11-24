@@ -1,9 +1,11 @@
 % Vorher WerteGenerator.p ausfuehren!
-clc 
+clc
 close all
 %% Aufgabe 1a)
 disp('Aufgabe 1a)');
 fprintf('\n');
+%Hier werden jeweils immer die 1. und 2. Spalte vertauscht, um die x- und
+%y-Koordinaten in der richtigen Spalte zu haben
 X=[A1_SystemI(1:5,2),A1_SystemI(1:5,1),A1_SystemI(1:5,3)];
 Z=[A1_SystemII(1:5,2),A1_SystemII(1:5,1),A1_SystemII(1:5,3)];
 disp('x0, y0, z0, ex, ey, ez, m:');
@@ -14,6 +16,8 @@ fprintf('\n');
 Xfull=[A1_SystemI(:,2),A1_SystemI(:,1),A1_SystemI(:,3)];
 disp('Punkt 4 [x,y,z]:');
 Z4=trafo3d(Xfull(4,:),p(1),p(2),p(3),p(4),p(5),p(6),p(7));
+%fprintf wird deshalb zur Ausgabe verwendet, weil die Array sonst
+%automatisch in Gleitkommaschreibweise ausgegeben werden
 fprintf('%.4f\n',Z4);
 fprintf('\n');
 disp('Punkt 5 [x,y,z]:');
@@ -37,6 +41,8 @@ Z1=[A1_SystemII(1,2) A1_SystemII(1,1) A1_SystemII(1,3);A1_SystemII(2,2) A1_Syste
 p1=trafoparam_3d_7p(X1,Z1,p);
 fprintf('%.4f\n',p1);
 fprintf('\n');
+%Die Verwendung der Funktion mit den Punkten 1, 2 6 fuehrt, wie richtig
+%vorausgesagt, zu einem Fehler
 disp('Parameter fuer Punkt 1, 4, 5, 6 (x0, y0, z0, ex, ey, ez, m):');
 X3=[A1_SystemI(1,2) A1_SystemI(1,1) A1_SystemI(1,3);A1_SystemI(4,2) A1_SystemI(4,1) A1_SystemI(4,3);A1_SystemI(5,2) A1_SystemI(5,1) A1_SystemI(5,3);A1_SystemI(6,2) A1_SystemI(6,1) A1_SystemI(6,3)];
 Z3=[A1_SystemII(1,2) A1_SystemII(1,1) A1_SystemII(1,3);A1_SystemII(4,2) A1_SystemII(4,1) A1_SystemII(4,3);A1_SystemII(5,2) A1_SystemII(5,1) A1_SystemII(5,3);A1_SystemII(6,2) A1_SystemII(6,1) A1_SystemII(6,3)];
